@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Ana Form" Height="450" Width="800">
+    <Grid>
+        <!--Xaml'da grid komutu tasarım yapmak için kullanılır. Burada Ekran satır ve sütunlara bölünür-->
+        <Grid.RowDefinitions>
+            <!-- Ekranda satır oluşturmak için kullanılan komut-->
+            <RowDefinition Height="130"></RowDefinition>
+            <!--1. satır-->
+            <RowDefinition Height="130"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--sütun belirtir...-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Margin="20" Grid.Row="0" Grid.Column="0" Name="btnCategory" Click="btnCategory_Click" Content="Kategori İşlemleri"></Button>
+        <Button Margin="20" Grid.Row="0" Grid.Column="1" Content="2. Button"></Button>
+        <Button Margin="20" Grid.Row="0" Grid.Column="2"  Content="3. Button"></Button>
+
+        <Button Margin="20" Grid.Row="1" Grid.Column="0" Content="1. Button"></Button>
+        <Button Margin="20" Grid.Row="1" Grid.Column="1" Content="2. Button"></Button>
+        <Button Margin="20" Grid.Row="1" Grid.Column="2"  Content="3. Button"></Button>
+
+        <TextBlock TextWrapping="Wrap" Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="0" Text="Ödev : Ürün Kargo ve Müşteri işlemleri tamamlanacak. Sipariş ve SiparişDetay sınıfları oluşturulacak. Bu sınıflar migration yöntemi ile veritbanına yansıtılacak. En sonda bir sipariş formı oluşurupup müşteri, şehir, ürün, kargo seçimi yapılacak sipariş tabloları dolduralacak" FontSize="22" FontWeight="Bold" FontStyle="Italic"></TextBlock>
+        
+    </Grid>
+</Window>
